@@ -1,36 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"> 
-    <title>Document</title>
-</head>
+<%- include("./partials/head.ejs") %> 
+
+
 <body>
     <div class="container">
-        <% for (let i = 0; i < 20; i += 1) { %>
-            <p><%= data[i].name %> </p>
-            <a href="/pokemon/<%=i%>">
-            <img src="<%=data[i].img%> " >
-            </a>
-        <% } %> 
 
-    <ul>
-        <% const type = data[i].type %>
-        <% for(let j = 0; j < type.length; j+=1){ %>
-        <li><%=type[j]%></li>
-    <% } %>
-    </ul>
-        <h4>Stats:</h4>
-        <ul>
-            <li>HP: <%=data[i].stats.hp%></li>
-            <li>Attack: <%=data[i].stats.attack%></li>
-            <li>SPattack: <%=data[i].stats.spattack%></li>
-            <li>SPdefense: <%=data[i].stats.spdefense%></li>
-            <li>Speed: <%=data[i].stats.speed%></li>
-        </ul>
+            
+            
+        <h5> <%=pokemon.name%> </h5>
+        <img src="<%=pokemon.img%>" /> <br>
+            <ul>
+                <h4>Type:</h4>
+                <li><%=pokemon.type[0]%></li>
+                <li><%=pokemon.type[1]%></li>
+            </ul>
+    
+        <tr>
+            <h4>Stats:</h4>
+            <td>HP: <%=pokemon.stats.hp%></td><br>
+            <td>Attack: <%=pokemon.stats.attack%></td><br>
+            <td>SPattack: <%=pokemon.stats.spattack%></td><br>
+            <td>SPdefense: <%=pokemon.stats.spdefense%></td><br>
+            <td>Speed: <%=pokemon.stats.speed%></td>
+        </tr><br><br>
+        <br><a href="/pokemon"><button>Back</button></a>
+        
     </div>
 </body>
 </html>

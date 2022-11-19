@@ -1,17 +1,3 @@
-require('dotenv').config() // get .env vars
-const mongoose = require("mongoose") // imports mongoose
-
-// Establish connection
-mongoose.connect(process.env.DATABASE_URL)
-
-// Connetion Events
-mongoose.connection
-.on("open", () => {console.log("Connect to Mongo")})
-.on("close", () => {console.log("Disconnected from Mongo")})
-.on("error", (error) => {console.log(error)})
-
-// export the mongoose object
-module.exports = mongoose
 module.exports = [
   {
     id: "001",
