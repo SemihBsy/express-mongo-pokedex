@@ -4,15 +4,22 @@
 <body>
     <div class="add">
         <h1>Add a New Pokemon</h1>
+        
+        
         <form action="/pokemon" method="POST">
-            <input type="text" name="name" placeholder="Name"><br>
+            <input id="pokename" type="text" name="name" placeholder="Name"><br>
+            <input type="text" name="img" placeholder="Image URL"><br>
             <input type="text" name="type" placeholder="Type"><br>
+            <input type="text" name="type" placeholder="Type2"><br>
             <input type="text" name="stats[hp]" placeholder="Health"><br>
             <input type="text" name="stats[attack]" placeholder="Attack"><br>
             <input type="text" name="stats[defense]" placeholder="Defense"><br>
             <input type="submit" value="Add Pokemon">
+
         </form>
+    
     </div>
-    <br><a href="/pokemon"><button>Back</button></a>
+    <br><a href="/pokemon"><button>Return To PokeDex</button></a>
+
 </body>
 </html>
